@@ -1,0 +1,40 @@
+<mvc:View xmlns:odata="sap.ui.comp.odata" xmlns:smarttable="sap.ui.comp.smarttable" controllerName="goscm.documentocad.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page">
+        <customHeader>
+            <Bar id="Bar1">
+                <contentLeft>
+                    <Button id="btn_Salir" icon="sap-icon://exit-full-screen"/>
+                </contentLeft>
+                <contentMiddle>
+                    <Title id="encabezado" text="{i18n>title}"></Title>
+                    
+                </contentMiddle>
+                <contentRight>
+                    <Image id="logo" src="\buildCADMABE-master\buildCADMABE-master\webapp\images\mabe2.jpg" width="2rem" class="sapUiTinyMarginBottom"/>
+                </contentRight>
+            </Bar>
+        </customHeader>
+        
+        <content>
+            <Panel id="panel1">
+                <HBox id="hbox1">
+                    <Label id="lb_Date" text="Fecha: " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                    <DatePicker id="dtpic1" placeholder="Ingrese la fecha" showFooter="true"></DatePicker>
+                </HBox>
+                <HBox id="hbox2" >
+                    <Label id="lb_Serie" text="Capturas:   " class="sapUiSmallMarginEnd sapUiTinyMarginTop"></Label>
+                    <odata:ComboBox id="input_Serie" class="sapUiSmallMarginEnd" width="170px" />
+           
+                </HBox>
+              
+
+                <HBox id="hbox4" alignContent="End" justifyContent="End" alignItems="End" class="sapUiTinyMarginBottom">
+                    <Button id="btn_Ir" text="Go" type="Emphasized" class="sapUiSmallMarginEnd" press="toNext"/>
+                </HBox>
+            </Panel>
+        
+        </content>
+    </Page>
+</mvc:View>
